@@ -1,107 +1,75 @@
 "use client";
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { Scale, ShieldCheck, HeartHandshake, HeartPulse } from 'lucide-react';
 
-export default function FeminismSection() {
+export default function FaultToleranceSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-15%" });
+  const isInView = useInView(ref, { once: true, margin: "-200px" });
 
-  const perspectives = [
-    { name: "Liberal Feminism", color: "#22D3EE", desc: "Equality through laws, systemic policies, equal pay, and access to education." },
-    { name: "Radical Feminism", color: "#A78BFA", desc: "Patriarchy entrenches power imbalances, gender roles, violence against women, and restrictions on reproductive rights within society." },
-    { name: "Socialist Feminism", color: "#EF4444", desc: "Correlating gender exploitation with economic and capitalist architecture." },
-    { name: "Cultural Feminism", color: "#FBBF24", desc: "Revaluing empathetic, collaborative traits as essential system components." },
-    { name: "Intersectional", color: "#10B981", desc: "Mapping overlapping identities (race, class, gender) to debug the full system." }
+  const supportSystems = [
+    { title: "Legal Protections", icon: Scale, desc: "Laws that protect victims and hold perpetrators completely accountable" },
+    { title: "Safe Reporting", icon: ShieldCheck, desc: "Secure mechanisms for event reporting without the fear of retaliation" },
+    { title: "Social Networks", icon: HeartHandshake, desc: "Community-driven support mechanisms and solidarity backup structures" },
+    { title: "Healthcare Access", icon: HeartPulse, desc: "Robust mental health resources and specialized medical care nodes" }
   ];
 
   return (
-    <section ref={ref} className="min-h-[100svh] flex items-center justify-center px-6 md:px-12 py-24 relative overflow-hidden">
-      <div className="max-w-7xl w-full mx-auto relative z-10">
-        
-        <div className="flex flex-col items-center text-center mb-16 md:mb-24">
+    <section ref={ref} className="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 md:py-32 relative">
+      <div className="max-w-6xl w-full mx-auto">
+        <div className="text-center md:text-left mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 mb-10"
+            className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)] text-[#22D3EE]"
           >
-            What is Feminism?
+            Fault Tolerance → Support Systems
           </motion.h2>
-
-          {/* Interactive Definition Link */}
-          <motion.a
-            href="https://en.wikipedia.org/wiki/Feminist_Manifesto" // Update this URL to your specific manifesto link
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="group relative block max-w-4xl mx-auto p-8 md:p-10 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/[0.05] hover:border-[#A78BFA]/40 hover:shadow-[0_0_30px_rgba(167,139,250,0.15)] transition-all duration-500 mb-8 cursor-pointer"
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.2 }}
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl ml-16 leading-relaxed"
           >
-            {/* Subtle corner glow on hover */}
-            <div className="absolute -top-px -right-px w-20 h-20 bg-gradient-to-bl from-[#A78BFA]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tr-3xl" />
-            
-            <p className="text-xl md:text-3xl text-[#E5E7EB] font-medium leading-relaxed relative z-10">
-              Feminism is a social and political movement that advocates for equal rights and opportunities across genders, especially addressing historical and systemic disadvantages faced by women.
-              <span className="inline-block ml-3 text-[#A78BFA] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                ↗
-              </span>
-            </p>
-          </motion.a>
-
-          {/* Styled Sub-label */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex items-center gap-4"
-          >
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#22D3EE]/50" />
-            <p className="text-sm md:text-base text-[#22D3EE] font-semibold tracking-[0.2em] uppercase">
-              Not a single idea, but a collection of architectural perspectives
-            </p>
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#22D3EE]/50" />
-          </motion.div>
+            Systems don't crash because they have backups.<br/>
+            <span className="text-[#E5E7EB] font-medium">People don't break when there are solid support structures in place.</span>
+          </motion.p>
         </div>
 
-        {/* Perspectives Grid */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-6"
-          initial="hidden"
-          animate={isInView ? "show" : "hidden"}
-          variants={{ show: { transition: { staggerChildren: 0.1 } } }}
-        >
-          {perspectives.map((p, i) => (
-            <motion.div
-              key={p.name}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 60 } }
-              }}
-              className="group flex-1 min-w-[300px] max-w-[400px] p-8 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[2rem] hover:bg-white/[0.04] transition-all duration-500 relative overflow-hidden"
-            >
-              <div 
-                className="absolute top-0 left-0 w-full h-1 opacity-50 group-hover:opacity-100 transition-opacity duration-300" 
-                style={{ backgroundColor: p.color, boxShadow: `0 0 20px ${p.color}` }} 
-              />
-              
-              <h3 className="text-2xl font-bold mb-4 tracking-tight" style={{ color: p.color }}>{p.name}</h3>
-              <p className="text-[#E5E7EB]/70 text-base leading-relaxed">{p.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {supportSystems.map((item, i) => {
+            const Icon = item.icon; // Extract the component for rendering
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.4 + i * 0.1, duration: 0.8, type: "spring" }}
+                className="p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl hover:border-[#22D3EE]/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:-translate-y-2 transition-all duration-300 group overflow-hidden relative"
+              >
+                {/* Subtle hover gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22D3EE]/0 to-[#22D3EE]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-        {/* Bottom Quote */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-20 p-8 md:p-10 bg-gradient-to-r from-[#22D3EE]/10 via-transparent to-[#A78BFA]/10 rounded-3xl border border-white/10 backdrop-blur-md text-center max-w-4xl mx-auto shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"
-        >
-          <p className="text-xl md:text-3xl text-white font-medium leading-relaxed italic">
-            "These perspectives aren't just social ideas; they are different ways of <span className="text-[#22D3EE] font-bold drop-shadow-[0_0_8px_rgba(34,211,238,0.4)] not-italic">debugging a flawed system</span>."
-          </p>
-        </motion.div>
+                <div className="flex items-start md:items-center flex-col md:flex-row gap-6 relative z-10">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#22D3EE]/20 to-[#A78BFA]/20 border border-[#22D3EE]/30 flex items-center justify-center shrink-0 shadow-inner group-hover:border-[#22D3EE]/60 transition-colors duration-300">
+                    <Icon 
+                      className="w-10 h-10 text-[#22D3EE] drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] group-hover:scale-110 transition-transform duration-300" 
+                      strokeWidth={1.5} 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#E5E7EB] mb-3 group-hover:text-[#22D3EE] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-lg text-[#E5E7EB]/70 leading-relaxed font-light">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
