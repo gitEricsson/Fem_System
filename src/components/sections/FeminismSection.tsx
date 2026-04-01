@@ -9,9 +9,9 @@ export default function FeminismSection() {
   const perspectives = [
     { name: "Liberal Feminism", color: "#22D3EE", desc: "Equality through laws, systemic policies, equal pay, and access to education." },
     { name: "Radical Feminism", color: "#A78BFA", desc: "Patriarchy entrenches power imbalances, gender roles, violence against women, and restrictions on reproductive rights within society." },
-    { name: "Socialist Feminism", color: "#22D3EE", desc: "Correlating gender exploitation with economic and capitalist architecture." },
+    { name: "Socialist Feminism", color: "#E5E7EB", desc: "Correlating gender exploitation with economic and capitalist architecture." },
     { name: "Cultural Feminism", color: "#A78BFA", desc: "Revaluing empathetic, collaborative traits as essential system components." },
-    { name: "Intersectional Feminism", color: "#E5E7EB", desc: "Mapping overlapping identities (race, class, gender) to debug the full system." }
+    { name: "Intersectional Feminism", color: "#22D3EE", desc: "Mapping overlapping identities (race, class, gender) to debug the full system." }
   ];
 
   return (
