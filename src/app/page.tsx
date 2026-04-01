@@ -22,12 +22,6 @@ export default function FeminismSystemDesign() {
 
   return (
     <div ref={containerRef} className="bg-[#0B0F14] text-[#E5E7EB] min-h-screen font-sans">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        * { font-family: 'Inter', sans-serif; }
-        body { overflow-x: hidden; }
-      `}</style>
-
       <HeroSection />
       <IntroSection />
       <FeminismSection />
