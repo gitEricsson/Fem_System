@@ -31,10 +31,10 @@ export default function EventDrivenSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl ml-16 leading-relaxed"
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl md:ml-16 leading-relaxed"
           >
-            Events: <span className="text-[#E5E7EB] font-medium">trigger immediate reactions in asynchronous systems.</span><br/>
-            Incidents: <span className="text-[#E5E7EB] font-medium">trigger viral movements and reckonings in society.</span>
+            Events: <span className="text-[#E5E7EB] font-medium">trigger immediate reactions and asynchronous responses.</span><br/>
+            Society: <span className="text-[#E5E7EB] font-medium">trigger viral reckonings and movements based on incidents.</span>
           </motion.p>
         </div>
 

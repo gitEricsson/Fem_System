@@ -36,7 +36,7 @@ export default function SPOFSection() {
           >
             SPOF → Patriarchy
           </motion.h2>
-          <p className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl ml-16 leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl md:ml-16 leading-relaxed">
             Tech: <span className="text-white font-medium">One server crashes → entire system fails.</span><br/>
             Society: <span className="text-white font-medium">One dominant power structure → systemic imbalance.</span>
           </p>

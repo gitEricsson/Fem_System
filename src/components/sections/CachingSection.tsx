@@ -31,7 +31,7 @@ export default function CachingSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl ml-16 leading-relaxed"
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl md:ml-16 leading-relaxed"
           >
             Cache: <span className="text-[#E5E7EB] font-medium">stores old data for faster access.</span><br/>
             Society: <span className="text-[#E5E7EB] font-medium">stores outdated beliefs instead of parsing real-time reality.</span>
@@ -146,7 +146,7 @@ export default function CachingSection() {
               transition-colors duration-300
               ${invalidated 
                 ? "bg-[#22D3EE] text-[#0B0F14] shadow-[0_10px_0px_#0891b2]" 
-                : "bg-[#A78BFA] text-[#0B0F14] shadow-[0_15px_40px_rgba(167,139,250,0.4)]"}
+                : "bg-[#A78BFA] text-[#0B0F14] shadow-[0_10px_0px_#7C3AED]"}
             `}
           >
             <motion.div

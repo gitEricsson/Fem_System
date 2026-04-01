@@ -29,10 +29,10 @@ export default function FaultToleranceSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl ml-16 leading-relaxed"
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-4xl md:ml-16 leading-relaxed"
           >
-            Systems don't crash because they have backups.<br/>
-            <span className="text-[#E5E7EB] font-medium">People don't break when there are solid support structures in place.</span>
+            Fault Tolerance: <span className="text-[#E5E7EB] font-medium">ensure the system stays up despite unexpected failures.</span><br/>
+            Society: <span className="text-[#E5E7EB] font-medium">ensure individuals stay whole despite systemic shocks and crises.</span>
           </motion.p>
         </div>
 

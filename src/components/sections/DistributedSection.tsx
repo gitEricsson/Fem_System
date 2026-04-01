@@ -28,10 +28,10 @@ export default function DistributedSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl ml-16 leading-relaxed"
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl md:ml-16 leading-relaxed"
           >
-            Distributed systems have multiple nodes with entirely different roles.<br/>
-            <span className="text-[#E5E7EB] font-medium">People experience life differently based on overlapping identities.</span>
+            Distributed: <span className="text-[#E5E7EB] font-medium">multiple nodes with entirely different roles and contexts.</span><br/>
+            Society: <span className="text-[#E5E7EB] font-medium">overlapping identities creating unique individual experiences.</span>
           </motion.p>
         </div>
 

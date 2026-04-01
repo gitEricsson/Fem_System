@@ -31,7 +31,7 @@ export default function LoadBalancingSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl ml-16 leading-relaxed"
+            className="text-xl md:text-2xl text-[#E5E7EB]/60 font-light max-w-3xl md:ml-16 leading-relaxed"
           >
             Load balancer: <span className="text-[#E5E7EB] font-medium">distributes traffic → prevents overload.</span><br/>
             Equality: <span className="text-[#E5E7EB] font-medium">distributes opportunity → prevents oppression.</span>
