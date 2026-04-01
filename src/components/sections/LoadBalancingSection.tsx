@@ -38,7 +38,7 @@ export default function LoadBalancingSection() {
           </motion.p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 items-center overflow-hidden">
           {/* Diagram */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

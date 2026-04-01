@@ -107,7 +107,7 @@ export default function CachingSection() {
                 initial={{ opacity: 0, scale: 0.8, x: 20, y: 20 }}
                 animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                 exit={{ opacity: 0, scale: 0.5 }}
-                className="absolute -top-16 hidden lg:flex flex-col items-start gap-1 pointer-events-none"
+                className="absolute -top-16 flex flex-col items-start gap-1 pointer-events-none"
               >
                 <div className="bg-[#A78BFA] text-[#0B0F14] text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-tighter shadow-lg">
                   Try it
